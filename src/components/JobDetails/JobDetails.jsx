@@ -7,6 +7,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {setItemInLocalStorage, getItemFromLocalStorage} from '../../utilities/localStorage.js'
+import { Helmet } from "react-helmet-async";
 
 const JobDetails = () => {
     const jobs = useLoaderData();
@@ -28,6 +29,9 @@ const JobDetails = () => {
 
     return (
         <div className="mb-10">
+            <Helmet>
+                <title>Career Hub | Details: {id}</title>
+            </Helmet>
             <h2 className="text-3xl font-bold text-center mb-16">Job Details</h2>
             <div className="grid md:grid-cols-3 gap-4">
                 <div className="md:col-span-2">

@@ -3,6 +3,7 @@ import { getItemFromLocalStorage } from '../../utilities/localStorage.js'
 import AppliedJob from '../AppliedJob/AppliedJob.jsx';
 import { FaAngleDown } from "react-icons/fa6";
 import { FaAngleUp } from "react-icons/fa6";
+import { Helmet } from 'react-helmet-async';
 
 const AppliedJobs = () => {
     const [click, setClick] = useState(false);
@@ -16,6 +17,9 @@ const AppliedJobs = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Career Hub | Applied Jobs</title>
+            </Helmet>
             <h2 className='text-2xl font-bold text-center mb-10'>Applied Jobs</h2>
             <div className='text-right mb-2'>
                 <details className="dropdown" onClick={() => setClick(!click)}>
